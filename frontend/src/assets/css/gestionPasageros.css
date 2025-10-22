@@ -1,0 +1,264 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding-top: 20px;
+    background-color:#00488b; 
+    transition: width 0.3s;
+} 
+
+.sidebar .nav-link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    color: #fff;
+} 
+
+
+.sidebar .description{
+    font-size: 14px;
+} 
+
+.sidebar .nav-link:hover{
+    background-color:#d8a602;
+} 
+
+.sidebar .sub-menu{
+    background-color: #023565;
+    padding-left: 3%;
+} 
+
+
+.main-content{
+    height: 100%;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+header{
+    margin-left: 200px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+    z-index: 1;
+}
+
+header h1{
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+} 
+
+/* Estilos para el buscador */
+.search-container {
+    position: relative;
+    width: 250px;
+}
+
+.search-input {
+    padding-right: 40px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.search-input:focus {
+    border-color: #00488b;
+    box-shadow: 0 0 0 0.2rem rgba(0, 72, 139, 0.25);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667;
+    cursor: pointer;
+}
+
+/* Estilos para la tabla de pasajeros con distribución específica */
+.pasajeros-table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    table-layout: fixed;
+    width: 100%;
+}
+
+.pasajeros-table thead th {
+    background-color: #343a40;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    border: none;
+    text-align: center;
+}
+
+.pasajeros-table tbody td {
+    padding: 12px;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pasajeros-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Distribución específica de anchos de columnas para pasajeros */
+.col-nombre {
+    width: 13%;
+    text-align: left !important;
+}
+
+.col-primer-apellido {
+    width: 13%;
+    text-align: left !important;
+}
+
+.col-segundo-apellido {
+    width: 13%;
+    text-align: left !important;
+}
+
+.col-tipo-doc {
+    width: 8%;
+}
+
+.col-numero-doc {
+    width: 12%;
+}
+
+.col-edad {
+    width: 7%;
+}
+
+.col-celular {
+    width: 14%;
+}
+
+.col-correo {
+    width: 17%;
+    text-align: left !important;
+}
+
+.col-accion {
+    width: 13%;
+}
+
+/* Estilos para los botones de acción */
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Estilos para la paginación */
+.pagination .page-link {
+    color: #00488b;
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #00488b;
+    border-color: #00488b;
+}
+
+.pagination .page-link:hover {
+    color: #023565;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+/* Estilos responsivos específicos para la tabla de pasajeros */
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .pasajeros-table {
+        font-size: 0.8rem;
+    }
+    
+    .pasajeros-table thead th,
+    .pasajeros-table tbody td {
+        padding: 8px 6px;
+    }
+    
+    .btn-outline-success,
+    .btn-outline-danger {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-outline-success,
+    .btn-outline-danger {
+        padding: 2px 4px;
+        font-size: 0.6rem;
+    }
+    
+    .pasajeros-table thead th,
+    .pasajeros-table tbody td {
+        padding: 6px 4px;
+        font-size: 0.75rem;
+    }
+} 
+
+/* Agreguemos la configuración de la mediacueri para la vista móvil (vista pequeña). */ 
+
+
+@media (max-width: 430px){
+    .sidebar{
+        width: 60px;
+    }
+    .sidebar .description{
+        display: none;
+    }
+    .sidebar .nav-link{
+        justify-content: center;
+    }
+    .main-content{
+        margin-left: 60px;
+    }
+    header{
+        margin-left: 60px;
+        padding: 15px;
+    }
+    header h1{
+        font-size: 1.5rem;
+    }
+}

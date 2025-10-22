@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- lik para estilo con bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- lik para estilo con css-->
+    <link rel="stylesheet" href="../assets/css/crearBuelos.css">
+</head>
+
+<body>
+
+    <!-- menu lateral responsivo -->
+    <div class="sidebar">
+        <nav class="nav flex-column">
+            <a href="../views/inicio.html" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-grid"></i>
+                    <span class="description">Inicio</span>
+                </span>
+            </a>
+            <a href="../views/crearBuelos.html" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-plus-circle"></i>
+                    <span class="description">Crear Vuelos</span>
+                </span>
+            </a>
+            <a href="../views/registrarAvion.html" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-airplane-engines"></i>
+                    <span class="description">Registrar avion</span>
+                </span>
+            </a>
+            <a href="../views/gestionPasajeros.html" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span class="description">Gestion de pasajeros</span>
+                </span>
+            </a> 
+            <a href="../views/crearAdmin.html" class="nav-link">
+                <span class="icon">
+                    <i class="bi bi-person-plus"></i>
+                    <span class="description">Crear admin</span>
+                </span>
+            </a>
+             <a href="#" class="nav-link link-salir">
+                <span class="icon">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span class="description">Salir</span>
+                </span>
+            </a>
+        </nav>
+
+    </div>
+
+
+    <!-- a qui empiesa el main de la aplicacion -->
+    <header>
+        <h1>Crear vuelos</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <!-- Botón agregar vuelos y buscador -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-6">
+                <button class="btn btn-success" id="agregarVueloBtn">
+                    <i class="bi bi-plus-circle me-2"></i>Agregar vuelos
+                </button>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex justify-content-end">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Buscar" id="searchVuelosInput">
+                        <i class="bi bi-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de vuelos -->
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped vuelos-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Origen</th>
+                                <th scope="col">Destino</th>
+                                <th scope="col">Fecha de salida</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Avío</th>
+                                <th scope="col">Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Medellin</td>
+                                <td>Bogota</td>
+                                <td>30/04/2025</td>
+                                <td>5:30pm</td>
+                                <td>700.000</td>
+                                <td>Airbus A220-300</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-success me-1" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" title="Eliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Paginación -->
+                <div class="d-flex justify-content-center mt-3">
+                    <nav aria-label="Paginación de vuelos">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Anterior">Anterior</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Siguiente">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- lik de js de bootstrap -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
